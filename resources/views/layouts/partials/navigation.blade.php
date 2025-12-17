@@ -22,9 +22,9 @@
             
             <div class="brand-text d-flex flex-column">
                 <span class="fw-bold text-primary fs-4 lh-1">{{ $site_name }}</span>
-                <small class="text-muted fw-normal" style="font-size: 0.75rem; margin-top: -3px;">
+                <!-- <small class="text-muted fw-normal" style="font-size: 0.75rem; margin-top: -3px;">
                     Find Your Dream Job
-                </small>
+                </small> -->
             </div>
         </a>
         
@@ -53,11 +53,11 @@
                href="{{ route('jobs.index') }}">
                 <i class="fas fa-briefcase me-2 fs-6"></i>
                 <span class="fw-medium">Find Jobs</span>
-                @if(isset($activeJobsCount))
+                <!-- @if(isset($activeJobsCount))
                     <span class="badge bg-danger ms-2 transition-all" style="font-size: 0.65rem; padding: 2px 6px;">
                         {{ $activeJobsCount }}
                     </span>
-                @endif
+                @endif -->
             </a>
         </li>
 
@@ -268,10 +268,10 @@
         border: 1px solid rgba(0, 0, 0, 0.05);
     }
     
-    .brand-logo-container:hover {
+    /* .brand-logo-container:hover {
         transform: translateY(-2px);
         box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-    }
+    } */
     
     /* Brand Icon Container */
     .brand-icon-container {

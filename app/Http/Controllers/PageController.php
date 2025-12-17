@@ -88,19 +88,30 @@ class PageController extends Controller
             'contact_address',
             'meta_title',
             'meta_description',
-            'meta_keywords'
+            'meta_keywords',
+            'facebook_url',
+            'twitter_url',
+            'instagram_url',
+            'linkedin_url'
         ])->pluck('value', 'key');
-        
+
         return view('pages.contact', [
-            'site_name' => $settings['site_name'] ?? config('app.name'),
-            'contact_phone' => $settings['contact_phone'] ?? '',
-            'contact_email' => $settings['contact_email'] ?? '',
-            'contact_address' => $settings['contact_address'] ?? '',
-            'meta_title' => $settings['meta_title'] ?? 'Contact Us',
+            'site_name'        => $settings['site_name'] ?? config('app.name'),
+            'contact_phone'    => $settings['contact_phone'] ?? '',
+            'contact_email'    => $settings['contact_email'] ?? '',
+            'contact_address'  => $settings['contact_address'] ?? '',
+            'meta_title'       => $settings['meta_title'] ?? 'Contact Us',
             'meta_description' => $settings['meta_description'] ?? '',
-            'meta_keywords' => $settings['meta_keywords'] ?? ''
+            'meta_keywords'    => $settings['meta_keywords'] ?? '',
+            'social_links' => [
+                'facebook'  => $settings['facebook_url'] ?? '',
+                'twitter'   => $settings['twitter_url'] ?? '',
+                'instagram' => $settings['instagram_url'] ?? '',
+                'linkedin'  => $settings['linkedin_url'] ?? '',
+            ],
         ]);
     }
+
 
     /**
      * Handle contact form submission
